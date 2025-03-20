@@ -34,12 +34,14 @@
 <body id="body">
     <!-- Spinner Start -->
     <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+        aria-live="polite" aria-busy="true">
         <div class="spinner-border text-info" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only text-info">Loading...</span>
+            <span class="visually-hidden">Loading...</span>
         </div>
     </div>
     <!-- Spinner End -->
+
 
     <div class="container">
         <div class="row g-5">
@@ -49,47 +51,110 @@
                     <h1 class="text-info mt-2">Ibrahim Muhammad</h1>
                     <div class="mb-4" style="height: 22px;">
                         <h4 class="typed-text-output d-inline-block text-light"></h4>
-                        <div class="typed-text d-none">Data Scientist, ML Engineer and Backend
-                            Developer</div>
+                        <div class="typed-text d-none">Data Scientist | Backend Developer</div>
                     </div>
                     <div class="d-flex justify-content-center mt-auto mb-3">
                         <a class="btn btn-secondary btn-square mx-1" href="https://twitter.com/ibrex29"><i
                                 class="fab fa-twitter"></i></a>
                         <a class="btn btn-secondary btn-square mx-1" href="https://facebook.com/ibrex29"><i
                                 class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-secondary btn-square mx-1" href="https://www.linkedin.com/in/ibrex29/"><i
+                        <a class="btn btn-secondary btn-square mx-1" href="https://www.linkedin.com/in/ibrex"><i
                                 class="fab fa-linkedin-in"></i></a>
                         <a class="btn btn-secondary btn-square mx-1" href="https://github.com/ibrex29"><i
                                 class="fab fa-github"></i></a>
                     </div>
-                    <div class="d-flex align-items-end justify-content-between border-top">
-                        <a href="assets/dowload/IBRAHIM MUHAMMAD DATASCIENTIST CV.docx.pdf" class="btn w-50 border-end">Download CV</a>
+                    <div class="d-flex align-items-end justify-content-between border-top position-relative">
+                        <a href="assets/download/IBRAHIM MUHAMMAD-BACKEND-DEVELOPER.pdf"
+                           class="btn w-50 border-end position-relative" id="download-btn" style="overflow: visible;">
+                            Download CV
+                            <span id="attention-arrow" style="
+                                position: absolute;
+                                right: -25px;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                color: #17a2b8;
+                                font-size: 1.8rem;
+                                pointer-events: none;
+                                display: none;
+                                animation: pulse 1s ease-in-out infinite;
+                                z-index: 9999;
+                            ">&#x2B07;</span> <!-- Downwards arrow -->
+                        </a>
                         <a href="#contact" class="btn w-50 btn-scroll">Contact Me</a>
                     </div>
+                    
+                    <!-- Inline CSS Animation -->
+                    <style>
+                    @keyframes pulse {
+                        0% { transform: translateY(-50%) scale(1); opacity: 1; }
+                        50% { transform: translateY(-50%) scale(1.3); opacity: 0.6; }
+                        100% { transform: translateY(-50%) scale(1); opacity: 1; }
+                    }
+                    </style>
+                    
+                    <!-- Inline JS -->
+                    <script>
+                        const arrow = document.getElementById('attention-arrow');
+                        setInterval(() => {
+                            arrow.style.display = 'inline';
+                            setTimeout(() => {
+                                arrow.style.display = 'none';
+                            }, 3000);
+                        }, 15000);
+                    </script>
+                    
+                    
                 </div>
             </div>
             <div class="col-lg-8">
                 <!-- About Start -->
                 <section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
                     <h1 class="title pb-3 mb-5 text-info">About Me</h1>
+
                     <p>
-                        I'm Ibrahim, nicknamed 'Ibrex', a passionate Data Scientist and Backend Developer driven by a deep-seated love for technology and problem-solving. My journey in software development began in high school, where I discovered my knack for crafting innovative solutions to address real-world challenges.   </p>
+                        I'm <strong>Ibrahim</strong>, nicknamed <strong>'Ibrex'</strong>, a passionate <strong>Data
+                            Scientist</strong> and <strong>Backend Developer</strong> driven by a deep love for
+                        technology and problem-solving. My journey in software development began in high school, where I
+                        discovered a talent for crafting innovative solutions to real-world challenges.
+                    </p>
+
                     <p>
-                       In my role as a Data Scientist, I specialize in harnessing the power of Python for data analysis and machine learning. With a meticulous approach, I extract actionable insights from complex datasets, enabling businesses to make informed decisions. My expertise extends to optimizing algorithms, ensuring that predictive models deliver accurate results and drive meaningful outcomes.            </p>
+                        In my role as a Data Scientist, I specialize in harnessing the power of <strong>Python</strong>
+                        for data analysis and machine learning. I take a meticulous approach to extracting actionable
+                        insights from complex datasets, enabling businesses to make informed decisions. My work includes
+                        optimizing algorithms and ensuring predictive models deliver accurate, meaningful results.
+                    </p>
+
                     <p>
-                        In parallel, I excel in backend development using NestJS, focusing on building scalable and reliable server architectures. From designing RESTful APIs to implementing authentication mechanisms, I prioritize robustness and efficiency in every aspect of backend development. Through my contributions, I enable seamless interactions between frontend and backend systems, empowering applications to perform optimally.           </p>
+                        In parallel, I excel in backend development using <strong>NestJS</strong>, with a focus on
+                        building scalable, reliable server architectures. From designing <strong>RESTful APIs</strong>
+                        to implementing <strong>authentication mechanisms</strong>, I prioritize robustness, efficiency,
+                        and seamless integration with frontend systems.
+                    </p>
+
                     <p>
-                        Looking ahead, I'm excited about the prospect of further expanding my skill set and exploring new technologies. Whether it's delving deeper into artificial intelligence or exploring emerging trends like blockchain, I'm eager to stay at the forefront of innovation and continue making meaningful contributions to the world of software development.              </p>
-                    
+                        I'm experienced in tools like <strong>PostgreSQL</strong>, <strong>MongoDB</strong>,
+                        <strong>Redis</strong>, <strong>Prisma ORM</strong>, and <strong>RabbitMQ</strong>, and skilled
+                        in building <strong>microservices</strong> and <strong>multi-tenant systems</strong>. My goal is
+                        always to enable optimal application performance and business value.
+                    </p>
+
+                    <p>
+                        Looking ahead, I'm excited about expanding my skill set and exploring emerging technologies like
+                        <strong>AI agents</strong>, <strong>blockchain</strong>, and advanced <strong>cloud-native
+                            systems</strong>. I’m committed to continuous learning, innovation, and making a meaningful
+                        impact through technology.
+                    </p>
+
                     <div class="row mb-4">
                         <div class="col-sm-6 py-1">
                             <span class="fw-medium text-info">Name:</span> Ibrahim Muhammad
                         </div>
                         <div class="col-sm-6 py-1">
-                            <span class="fw-medium text-info">Degree:</span> Bsc Computer Science
+                            <span class="fw-medium text-info">Degree:</span> BSc Computer Science
                         </div>
                         <div class="col-sm-6 py-1">
-                            <span class="fw-medium text-info">Experience:</span> 3 Years
+                            <span class="fw-medium text-info">Experience:</span> 4+ Years
                         </div>
                         <div class="col-sm-6 py-1">
                             <span class="fw-medium text-info">Phone:</span> +234 703 951 0826
@@ -104,34 +169,35 @@
                             <span class="fw-medium text-info">Freelance:</span> Available
                         </div>
                     </div>
+
                     <div class="row g-4">
                         <div class="col-md-4 col-lg-6 col-xl-4">
                             <div class="d-flex bg-secondary p-4">
-                                <h1 class="flex-shrink-0 display-5 text-info mb-0" data-toggle="counter-up">5</h1>
+                                <h1 class="flex-shrink-0 display-5 text-info mb-0" data-toggle="counter-up">4</h1>
                                 <div class="ps-3">
                                     <p class="mb-0">Years of</p>
                                     <h5 class="mb-0">Experience</h5>
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-md-4 col-lg-6 col-xl-4">
                             <div class="d-flex bg-secondary p-4">
-                                <h1 class="flex-shrink-0 display-5 text-info mb-0" data-toggle="counter-up">14<h1
-                                        class="flex-shrink-0 display-6 text-info mb-0">+</h1>
-                                </h1>
+                                <h1 class="flex-shrink-0 display-5 text-info mb-0" data-toggle="counter-up">14</h1>
+                                <h1 class="flex-shrink-0 display-6 text-info mb-0">+</h1>
                                 <div class="ps-3">
                                     <p class="mb-0">Happy</p>
                                     <h5 class="mb-0">Clients</h5>
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-md-4 col-lg-6 col-xl-4">
                             <div class="d-flex bg-secondary p-4">
-                                <h1 class="flex-shrink-0 display-5 text-info mb-0" data-toggle="counter-up">25<h1
-                                        class="flex-shrink-0 display-6 text-info mb-0">+</h1>
-                                </h1>
+                                <h1 class="flex-shrink-0 display-5 text-info mb-0" data-toggle="counter-up">20+</h1>
+                                <h1 class="flex-shrink-0 display-6 text-info mb-0">+</h1>
                                 <div class="ps-3">
-                                    <p class="mb-0">Complete</p>
+                                    <p class="mb-0">Completed</p>
                                     <h5 class="mb-0">Projects</h5>
                                 </div>
                             </div>
@@ -140,202 +206,279 @@
                 </section>
                 <!-- About End -->
 
+                <!-- About End -->
+
                 <!-- Skills Start -->
                 <section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
                     <h1 class="title pb-3 mb-5 text-info">Skills</h1>
                     <div class="row">
-                        <div class="col-sm-6">
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <p class="mb-2">Python</p>
-                                    <p class="mb-2">95%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="95"
-                                        aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <p class="mb-2">NestJS</p>
-                                    <p class="mb-2">85%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-secondary" role="progressbar" aria-valuenow="90"
-                                        aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <p class="mb-2">POSTGRESQL</p>
-                                    <p class="mb-2">90%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="90"
-                                        aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <p class="mb-2">Jupyter</p>
-                                    <p class="mb-2">70%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="85"
-                                        aria-valuemin="0" aria-valuemax="100" style="background-color: #6D47FF;"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <p class="mb-2">Prisma</p>
-                                    <p class="mb-2">90%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="90"
-                                        aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <p class="mb-2">Express</p>
-                                    <p class="mb-2">95%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="95"
-                                        aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <p class="mb-2">Database Normalization</p>
-                                    <p class="mb-2">90%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90"
-                                        aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
+                        <div class="col-md-6">
+                            <h5 class="text-primary">Backend Development</h5>
+                            <ul class="mb-4">
+                                <li>Node.js, TypeScript, NestJS</li>
+                                <li>RESTful API Development, Microservices Architecture</li>
+                                <li>Swagger API Documentation</li>
+                            </ul>
+
+                            <h5 class="text-primary">Database Technologies</h5>
+                            <ul class="mb-4">
+                                <li>PostgreSQL, MongoDB, Redis</li>
+                                <li>Prisma ORM, Mongoose ORM</li>
+                                <li>SQL & NoSQL, Database Optimization</li>
+                            </ul>
+
+                            <h5 class="text-primary">Authentication & Security</h5>
+                            <ul class="mb-4">
+                                <li>JWT, OAuth 2.0, Passport.js</li>
+                                <li>Role-Based Access Control (RBAC), API Guards</li>
+                                <li>Security Best Practices, Data Encryption</li>
+                            </ul>
                         </div>
 
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <p class="mb-2">Data Cleaning and Engineering </p>
-                            <p class="mb-2">85%</p>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90"
-                                aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                <!-- </div> -->
+                        <div class="col-md-6">
+                            <h5 class="text-primary">DevOps & Performance</h5>
+                            <ul class="mb-4">
+                                <li>Docker, CI/CD Pipelines, Git</li>
+                                <li>Caching Strategies</li>
+                                <li>System Monitoring & Optimization</li>
+                                <li>Scalability & Performance Optimization</li>
+                            </ul>
 
-            <!-- </div> -->
+                            <h5 class="text-primary">AI & Data Engineering</h5>
+                            <ul>
+                                <li>AI Agents, Predictive Modeling</li>
+                                <li>Data Cleaning & Engineering</li>
+                                <li>Real-time Data Processing</li>
+                            </ul>
+                        </div>
+                    </div>
                 </section>
-                <!-- Skills End -->
 
-               <!-- Experience Start -->
-        <section class="py-5 wow fadeInUp" data-wow-delay="0.1s">
-            <h1 class="title pb-3 mb-5 text-info">Experience</h1>
-            <div class="border-start border-2 border-light pt-2 ps-5">
-                <div class="position-relative mb-4">
-                    <span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
-                    <h5 class="mb-1">Backend Developer</h5>
-                    <p class="mb-2">Thermolinks Concept Ltd. | <small>2023</small></p>
-                    <p>
-                        At Thermolinks Concept Ltd., I play a pivotal role as a Backend Developer, responsible for architecting and implementing robust server-side solutions to support our digital initiatives. 
-                        Leveraging my expertise in backend technologies, I collaborate closely with cross-functional teams to design and develop scalable APIs, database structures, and server architectures. 
-                        My contributions extend beyond mere code implementation; I actively participate in brainstorming sessions, offering insights into system architecture and optimization strategies. 
-                        Additionally, I am involved in the deployment and maintenance of backend systems, ensuring seamless operation and performance optimization. 
-                        Through my dedication to quality and efficiency, I strive to drive innovation and elevate our digital infrastructure to new heights.
-                    </p>
-                </div>
-                <div class="position-relative mb-4">
-                    <span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
-                    <h5 class="mb-1">Full-Stack Developer</h5>
-                    <p class="mb-2">Jigawa Journal of Social and Management Science | <small>2022 - Present</small></p>
-                    <p>
-                        As a Full-Stack Developer, I have contributed extensively to various projects, showcasing my proficiency across both front-end and back-end development domains. 
-                        My experience encompasses the development of a comprehensive journal management system, collaborating with teams to deploy it using WordPress. 
-                        Currently, I hold the role of Web Manager, overseeing diverse digital initiatives.
-                    </p>
-                </div>
-                <div class="position-relative mb-4">
-                    <span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
-                    <h5 class="mb-1">Web Developer</h5>
-                    <p class="mb-2">Sule Lamido University Journal Management System | <small>2022 - Present</small></p>
-                    <p>
-                        Website Development: Overseeing the design, development, and maintenance of the organization's website.
-                        <br>
-                        Content Management: Ensuring that the website content is up to date, relevant, and engaging for visitors.
-                        <br>
-                        Security and Maintenance: Ensuring the website is secure, regularly updated, and protected against potential threats.
-                        <br>
-                        Collaboration: Working closely with cross-functional teams, such as marketing and IT, to align web strategies with overall business goals.
-                    </p>
-                </div>
-                <div class="position-relative mb-4">
-                    <span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
-                    <h5 class="mb-1">Data Scientist</h5>
-                    <p class="mb-2">Jigawa Data Science Nig. | <small>2021 - 2022</small></p>
-                    <p>
-                        Sule Lamido University, Kafin-Hausa || 2022 - 2023
-                        <br>
-                        Development of Chronic Kidney Disease Prediction Application Using Machine Learning Approach, Jigawa state June 2022 - November 2022
-                        <br>
-                        - Developed a machine learning model that accurately predicted application usage patterns and trends.
-                        <br>
-                        - Collaborated in the Data analysis and Building of the Model.
-                        <br>
-                        - Participated in the Deployment of the Model on a Web Server.
-                    </p>
-                </div>
-            </div>
-        </section>
-        <!-- Experience End -->
+                <!-- Skills End -->
+                <!-- Experience Start -->
+                <section class="py-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="title pb-3 mb-5 text-info">Experience</h1>
+                    <div class="border-start border-2 border-light pt-2 ps-5">
+
+                        <div class="position-relative mb-4">
+                            <span class="bi bi-arrow-right fs-4 text-light position-absolute"
+                                style="top: -5px; left: -50px;"></span>
+                            <h5 class="mb-1">Backend Developer</h5>
+                            <p class="mb-2">Nigerian Startup Portal (NSP) | <small>April 2024 – Present</small></p>
+                            <p>
+                                Engineered scalable backend systems using NestJS, PostgreSQL, and Prisma ORM.
+                                Implemented microservices with RabbitMQ, Redis caching, and role-based access control
+                                (RBAC).
+                                Led key modules including user registration, ticketing, and labelling features, while
+                                managing CI/CD and Docker-based deployments.
+                            </p>
+                        </div>
+
+                        <div class="position-relative mb-4">
+                            <span class="bi bi-arrow-right fs-4 text-light position-absolute"
+                                style="top: -5px; left: -50px;"></span>
+                            <h5 class="mb-1">Backend Developer</h5>
+                            <p class="mb-2">CYNEGIEhr Solution | <small>Nov 2023 – Mar 2024</small></p>
+                            <p>
+                                Developed a multi-tenant HR platform backend with NestJS, MongoDB (Mongoose & TypeORM).
+                                Delivered core HR modules (Employee, Attendance, Leave) with JWT/OAuth2 authentication,
+                                tenant-based data segregation, real-time notifications, and Dockerized CI/CD pipelines.
+                            </p>
+                        </div>
+
+                        <div class="position-relative mb-4">
+                            <span class="bi bi-arrow-right fs-4 text-light position-absolute"
+                                style="top: -5px; left: -50px;"></span>
+                            <h5 class="mb-1">Backend Developer</h5>
+                            <p class="mb-2">Tech Atlas | <small>April 2024 – Jan 2025</small></p>
+                            <p>
+                                Led backend development using NestJS and PostgreSQL with Prisma ORM.
+                                Built secure APIs, implemented Passport.js with OAuth2 and JWT, enforced RBAC, and
+                                documented APIs using Swagger.
+                                Optimized performance with caching, indexing, and query refinement.
+                            </p>
+                        </div>
+
+                        <div class="position-relative mb-4">
+                            <span class="bi bi-arrow-right fs-4 text-light position-absolute"
+                                style="top: -5px; left: -50px;"></span>
+                            <h5 class="mb-1">Backend Developer</h5>
+                            <p class="mb-2">Bolle Insurance | <small>April 2024 – Jan 2025</small></p>
+                            <p>
+                                Built a multi-provider insurance API with NestJS, integrating Leadway and Allianz.
+                                Implemented dynamic package handling, DTO validation, OAuth2 authentication, and robust
+                                error handling.
+                                Standardized external API responses and ensured secure policy issuance workflows.
+                            </p>
+                        </div>
+
+                        <div class="position-relative mb-4">
+                            <span class="bi bi-arrow-right fs-4 text-light position-absolute"
+                                style="top: -5px; left: -50px;"></span>
+                            <h5 class="mb-1">Full-Stack Developer</h5>
+                            <p class="mb-2">Jigawa Journal of Social and Management Science | <small>2022 –
+                                    Present</small></p>
+                            <p>
+                                Developed and managed a journal system using WordPress, overseeing digital initiatives
+                                as Web Manager.
+                            </p>
+                        </div>
+
+                        <div class="position-relative mb-4">
+                            <span class="bi bi-arrow-right fs-4 text-light position-absolute"
+                                style="top: -5px; left: -50px;"></span>
+                            <h5 class="mb-1">Web Developer</h5>
+                            <p class="mb-2">SLU Journal Management System | <small>2022 – Present</small></p>
+                            <p>
+                                Led website development and maintenance, ensured content relevancy, and collaborated
+                                with cross-functional teams for digital strategies.
+                            </p>
+                        </div>
+
+                        <div class="position-relative mb-4">
+                            <span class="bi bi-arrow-right fs-4 text-light position-absolute"
+                                style="top: -5px; left: -50px;"></span>
+                            <h5 class="mb-1">Developer (IoT Integration)</h5>
+                            <p class="mb-2">Fish Pond Monitoring System | <small>Mar 2022 – Dec 2022</small></p>
+                            <p>
+                                Integrated IoT devices for real-time pond monitoring, used Firebase for data sync, and
+                                developed predictive models and alert systems.
+                            </p>
+                        </div>
+
+                        <div class="position-relative mb-4">
+                            <span class="bi bi-arrow-right fs-4 text-light position-absolute"
+                                style="top: -5px; left: -50px;"></span>
+                            <h5 class="mb-1">Developer</h5>
+                            <p class="mb-2">Project SEED (Orphan Management System) | <small>Dec 2022 – Feb 2023</small>
+                            </p>
+                            <p>
+                                Built backend system with NestJS and PostgreSQL for orphan registration, sponsorship,
+                                and real-time notifications.
+                                Ensured security through RBAC and session management.
+                            </p>
+                        </div>
+
+                        <div class="position-relative mb-4">
+                            <span class="bi bi-arrow-right fs-4 text-light position-absolute"
+                                style="top: -5px; left: -50px;"></span>
+                            <h5 class="mb-1">Data Scientist</h5>
+                            <p class="mb-2">Jigawa Data Science Nig. | <small>2021 – 2022</small></p>
+                            <p>
+                                Developed a chronic kidney disease prediction model, handled data analysis, model
+                                training, and deployment on a web server.
+                            </p>
+                        </div>
+
+                    </div>
+                </section>
+                <!-- Experience End -->
+
 
 
                 <!-- Services Start -->
                 <section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
                     <h1 class="title pb-3 mb-5">Services</h1>
                     <div class="row g-4">
+                        <!-- Web Development -->
                         <div class="col-md-6">
                             <div class="service-item">
-                                <i class="fa fa-2x fa-file-code mx-auto mb-4"></i>
+                                <i class="fa fa-2x fa-code mx-auto mb-4"></i>
                                 <h5 class="mb-2">Web Development</h5>
                                 <p class="mb-0">
-                                    I specialize in creating robust and scalable web applications, with a strong focus on developing high-performance APIs.<br>
-                                    My expertise ensures that your web solutions are efficient, secure, and meet the highest industry standards.<br>
-                                    Whether you need a simple website or a complex web application, I can deliver a seamless and professional product.
+                                    I specialize in building robust and scalable web applications with a focus on
+                                    performance and user experience.<br>
+                                    From responsive landing pages to complex platforms, I deliver seamless and
+                                    professional web solutions.
                                 </p>
                             </div>
                         </div>
+
+                        <!-- Backend Development -->
                         <div class="col-md-6">
                             <div class="service-item">
-                                <i class="fab fa-2x fa-python mx-auto mb-4"></i>
-                                <h5 class="mb-2">Data Science and Machine Learning</h5>
+                                <i class="fa fa-2x fa-server mx-auto mb-4"></i>
+                                <h5 class="mb-2">Backend Development & API Integration</h5>
                                 <p class="mb-0">
-                                    My expertise lies in data science and machine learning, where I leverage cutting-edge algorithms and techniques to extract valuable insights from data.<br>
-                                    Whether it's building predictive models, clustering data, or implementing deep learning algorithms, 
-                                    I can help you harness the power of data to drive informed decision-making and innovative solutions.
+                                    Proficient in developing high-performance, secure, and scalable backend systems
+                                    using Node.js, NestJS, and Express.js.<br>
+                                    I design clean APIs, handle real-time data, and ensure modular, maintainable
+                                    codebases.
                                 </p>
                             </div>
                         </div>
+
+                        <!-- Server & Database Development -->
                         <div class="col-md-6">
                             <div class="service-item">
                                 <i class="fa fa-2x fa-database mx-auto mb-4"></i>
                                 <h5 class="mb-2">Server & Database Development</h5>
                                 <p class="mb-0">
-                                    I have extensive experience in server and database development, working with technologies like Prisma, PostgreSQL, and SQL.<br>
-                                    My skills ensure efficient, scalable, and secure database solutions tailored to your needs.
+                                    Experienced in PostgreSQL, Prisma ORM, SQL, and MongoDB to build efficient and
+                                    scalable data solutions.<br>
+                                    Skilled in database optimization, migration, and secure server deployments using
+                                    Docker and CI/CD pipelines.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- AI Automations -->
+                        <div class="col-md-6">
+                            <div class="service-item">
+                                <i class="fa fa-2x fa-robot mx-auto mb-4"></i>
+                                <h5 class="mb-2">AI Automations & Intelligent Systems</h5>
+                                <p class="mb-0">
+                                    I design AI-powered automation tools to enhance efficiency and drive innovation.<br>
+                                    Experience includes NLP, predictive analytics, chatbots, and workflow automation
+                                    using Python, OpenAI API, and machine learning frameworks.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Data Science & Machine Learning -->
+                        <div class="col-md-6">
+                            <div class="service-item">
+                                <i class="fab fa-2x fa-python mx-auto mb-4"></i>
+                                <h5 class="mb-2">Data Science & Machine Learning</h5>
+                                <p class="mb-0">
+                                    I analyze data to extract insights and build predictive models for informed
+                                    decision-making.<br>
+                                    Tools include Python, Pandas, scikit-learn, and TensorFlow, applied to forecasting,
+                                    clustering, and classification tasks.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- DevOps & Cloud Deployment -->
+                        <div class="col-md-6">
+                            <div class="service-item">
+                                <i class="fa fa-2x fa-cloud-upload-alt mx-auto mb-4"></i>
+                                <h5 class="mb-2">DevOps & Cloud Deployment</h5>
+                                <p class="mb-0">
+                                    Deploying scalable applications on AWS, DigitalOcean, and Heroku with automation
+                                    tools like Docker and GitHub Actions.<br>
+                                    Focused on uptime, scalability, and security in cloud infrastructure.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Technical Consulting -->
+                        <div class="col-md-6">
+                            <div class="service-item">
+                                <i class="fa fa-2x fa-lightbulb mx-auto mb-4"></i>
+                                <h5 class="mb-2">Technical Consulting & Strategy</h5>
+                                <p class="mb-0">
+                                    Offering strategic advice on project planning, architecture, and tech stack
+                                    selection.<br>
+                                    Helping startups and businesses align technology with goals through efficient and
+                                    cost-effective solutions.
                                 </p>
                             </div>
                         </div>
                     </div>
                 </section>
                 <!-- Services End -->
+
 
                 <!-- Portfolio Start -->
                 <section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
@@ -345,53 +488,110 @@
                             <div class="row">
                                 <div class="col-12 text-center mb-2">
                                     <ul class="list-inline mb-4" id="portfolio-flters">
-                                        <li class="btn btn-secondary"><i class="fa fa-mobile-alt me-2"></i>All</li>
+                                        <li class="btn btn-secondary active"><i class="fa fa-mobile-alt me-2"></i>All
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="row portfolio-container">
+
+                                <!-- PastQ -->
                                 <div class="col-md-6 mb-4 portfolio-item">
                                     <div class="position-relative overflow-hidden mb-2">
                                         <div class="portfolio-image-container">
-                                            <img class="img-fluid w-100" src="img/portfolio-1.png" alt="">
+                                            <img class="img-fluid w-100" src="img/portfolio-1.png" alt="PastQ App">
                                         </div>
                                         <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                            <a href="https://play.google.com/store/apps/details?id=com.geeksaxis.pastQ">
+                                            <a href="https://play.google.com/store/apps/details?id=com.geeksaxis.pastQ"
+                                                target="_blank">
                                                 <i class="bi bi-link text-light"></i>
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <h4>PastQ</h4>
-                                        <p>A past examination question app</p>
-                                    </div>
-                                    <div class="col-md-6">
+                                    <h4>PastQ</h4>
+                                    <p>A past examination question app helping students prepare efficiently.</p>
+                                    <div>
                                         <img src="./img/flutter.png" width="30px" />
                                         <img src="./img/firebase.png" width="30px" />
                                     </div>
                                 </div>
+
+                                <!-- NSP API -->
                                 <div class="col-md-6 mb-4 portfolio-item">
                                     <div class="position-relative overflow-hidden mb-2">
                                         <div class="portfolio-image-container">
-                                            <img class="img-fluid w-100" src="img/portfolio-2.png" alt="">
+                                            <img class="img-fluid w-100" src="img/NSP.jpeg" alt="NSP API">
                                         </div>
                                         <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                            <a href="https://play.google.com/store/apps/details?id=com.hucxs.defi.app">
+                                            <a href="https://startup.gov.ng" target="_blank">
                                                 <i class="bi bi-link text-light"></i>
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <h4>Hucxs Defi Wallet</h4>
-                                        <p>A solana defi wallet application</p>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <img src="./img/flutter.png" width="30px" />
-                                        <img src="./img/firebase.png" width="30px" />
-                                        <img src="./img/nodejs.png" width="30px" />
+                                    <h4>NSP API</h4>
+                                    <p>Backend API for Nigeria Startup Portal, facilitating startup registration and
+                                        labeling.</p>
+                                    <div>
+                                        <img src="./img/NSP.jpeg" width="30px" />
+                                        <img src="./img/postgresql.png" width="30px" />
+                                        <img src="./img/docker.png" width="30px" />
                                         <img src="./img/ts.png" width="30px" />
                                     </div>
                                 </div>
+
+                                <!-- SLUJST -->
+                                <div class="col-md-6 mb-4 portfolio-item">
+                                    <div class="position-relative overflow-hidden mb-2">
+                                        <div class="portfolio-image-container">
+                                            <img class="img-fluid w-100" src="img/slujst.jpeg" alt="SLUJST App">
+                                        </div>
+                                        <div class="portfolio-btn d-flex align-items-center justify-content-center">
+                                            <a href="#" target="_blank">
+                                                <i class="bi bi-link text-light"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <h4>SLUJST</h4>
+                                    <p>An academic journal management system for submissions, peer reviews, and
+                                        publication workflows.</p>
+                                    <div>
+                                        <img src="./img/nestjs.png" width="30px" />
+                                        <img src="./img/postgresql.png" width="30px" />
+                                        <img src="./img/socketio.png" width="30px" />
+                                        <img src="./img/ts.png" width="30px" />
+                                    </div>
+                                </div>
+
+                                <!-- Seed Project -->
+                                <div class="col-md-6 mb-4 portfolio-item">
+                                    <div class="position-relative overflow-hidden mb-2">
+                                        <div class="portfolio-image-container">
+                                            <img class="img-fluid w-100" src="img/seed.png" alt="Seed Project">
+                                        </div>
+                                        <div class="portfolio-btn d-flex align-items-center justify-content-center">
+                                            <a href="#" target="_blank">
+                                                <i class="bi bi-link text-light"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <h4>Seed Project</h4>
+                                    <p>An AI-powered analytics tool for monitoring healthcare infrastructure across
+                                        Nigeria.</p>
+                                    <div>
+                                        <img src="./img/python.png" width="30px" />
+                                        <img src="./img/pandas.png" width="30px" />
+                                        <img src="./img/qgis.png" width="30px" />
+                                        <img src="./img/nextjs.png" width="30px" />
+                                    </div>
+                                </div>
+
+                                <!-- Add More Projects Here -->
+                                <!-- Example: -->
+                                <!--
+                <div class="col-md-6 mb-4 portfolio-item">
+                    ...project content...
+                </div>
+                -->
 
                             </div>
                         </div>
@@ -399,14 +599,22 @@
                 </section>
                 <!-- Portfolio End -->
 
+
                 <!-- Testimonial Start -->
                 <section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s" style="margin-top: 30px;">
                     <h1 class="title pb-3 mb-5">Testimonial</h1>
                     <div class="owl-carousel testimonial-carousel">
+                        <!-- Testimonial 1 -->
                         <div class="text-left">
                             <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
                             <p class="fs-4 mb-4">
-                                The site developed for managing our journals has exceeded our expectations. Its intuitive interface and robust features have streamlined our workflow and enhanced productivity. We're impressed by the attention to detail and the level of customization provided by the development team. It has truly revolutionized the way we manage our publications.
+                                The site developed for managing our journals has exceeded our expectations. Its
+                                intuitive interface
+                                and robust features have streamlined our workflow and enhanced productivity. We're
+                                impressed by
+                                the attention to detail and the level of customization provided by the development team.
+                                It has
+                                truly revolutionized the way we manage our publications.
                             </p>
                             <div class="d-flex align-items-center">
                                 <img class="img-fluid" src="img/testimonial.jpg" style="width: 60px; height: 60px;">
@@ -415,95 +623,196 @@
                                     <i>Lecturer</i>
                                 </div>
                             </div>
-                        <!-- </div> -->
+                        </div>
+
+                        <!-- Testimonial 2: DG NITDA -->
+                        <div class="text-left">
+                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                            <p class="fs-4 mb-4">
+                                The successful delivery of the NSP platform has significantly advanced our digital
+                                transformation
+                                agenda. The professionalism and technical excellence demonstrated by the development
+                                team are
+                                commendable. This solution not only meets global standards but also showcases the
+                                potential of
+                                indigenous tech talent to solve national challenges.
+                            </p>
+                            <div class="d-flex align-items-center">
+                                <img class="img-fluid" src="img/DG-Image.png" style="width: 60px; height: 60px;">
+                                <div class="ps-3">
+                                    <p class="text-primary fs-5 mb-1">Kashifu Inuwa</p>
+                                    <i>Director General, NITDA</i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- You can add more testimonials here -->
+                    </div>
                 </section>
                 <!-- Testimonial End -->
 
+
                 <!-- Contact Start -->
                 <section class="py-5 wow fadeInUp" data-wow-delay="0.1s" id="contact">
-                    <h1 class="title pb-3 mb-5">Contact Me</h1>
-                    <form>
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control border-0 bg-secondary" id="name"
-                                        placeholder="Your Name">
-                                    <label for="name">Your Name</label>
+                    <div class="container">
+                        <h1 class="title pb-3 mb-5 text-center">Contact Me</h1>
+                        <form id="contactForm" onsubmit="sendEmail(); return false;">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0 bg-secondary" id="name"
+                                            placeholder="Your Name" required>
+                                        <label for="name">Your Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control border-0 bg-secondary" id="email"
+                                            placeholder="Your Email" required>
+                                        <label for="email">Your Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0 bg-secondary" id="subject"
+                                            placeholder="Subject" required>
+                                        <label for="subject">Subject</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control border-0 bg-secondary"
+                                            placeholder="Leave a message here" id="message" style="height: 200px"
+                                            required></textarea>
+                                        <label for="message">Message</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-info w-100 py-3" type="submit">Send Message</button>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control border-0 bg-secondary" id="email"
-                                        placeholder="Your Email">
-                                    <label for="email">Your Email</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control border-0 bg-secondary" id="subject"
-                                        placeholder="Subject">
-                                    <label for="subject">Subject</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control border-0 bg-secondary"
-                                        placeholder="Leave a message here" id="message"
-                                        style="height: 200px"></textarea>
-                                    <label for="message">Message</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <a href="mailto:ibrex29@gmail.com?cc=subject=Hello"><button class="btn btn-info w-100 py-3" onclick="sendEmail()" type="submit">Send
-                                        Message</button></a>
-                            </div>
-                        </div>
-                    </form>
-                </section>
-                <!-- Contact End -->
+                        </form>
 
-                <!-- Footer Start -->
-                <section class="wow fadeIn" data-wow-delay="0.1s">
-                    <div class="bg-secondary text-light text-center p-5">
-                        <div class="d-flex justify-content-center mb-4">
-                            <a class="btn btn-dark btn-square mx-1" href="https://twitter.com/ibrex29"><i
-                                    class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-square mx-1" href="https://facebook.com/ibrex29"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-square mx-1" href="https://www.linkedin.com/in/ibrex29/"><i
-                                    class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-dark btn-square mx-1" href="https://github.com/ibrex29"><i
-                                    class="fab fa-github"></i></a>
-                        </div>
-                        <p class="m-0">&copy; All Rights Reserved. Designed by <a href="" class="text-info">Ibrahim Muhammad</a></p>
+                        <script>
+                            function sendEmail() {
+                                const name = document.getElementById("name").value.trim();
+                                const email = document.getElementById("email").value.trim();
+                                const subject = document.getElementById("subject").value.trim();
+                                const message = document.getElementById("message").value.trim();
+
+                                const mailtoLink = `mailto:ibrex29@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+                                    `Hello,\n\nMy name is ${name} (${email}).\n\n${message}\n\nBest regards,\n${name}`
+                                )}`;
+
+                                // Trigger mail client
+                                window.location.href = mailtoLink;
+
+                                // Show confirmation message
+                                const confirmation = document.getElementById("confirmation");
+                                confirmation.classList.remove("d-none");
+
+                                // Optional: Reset form fields
+                                document.getElementById("contactForm").reset();
+
+                                // Auto-hide confirmation after 5 seconds
+                                setTimeout(() => {
+                                    confirmation.classList.add("d-none");
+                                }, 5000);
+                            }
+                        </script>
+
+                        <!-- Contact End -->
+
+
+                        <script>
+                            function sendEmail() {
+                                const name = document.getElementById("name").value.trim();
+                                const email = document.getElementById("email").value.trim();
+                                const subject = document.getElementById("subject").value.trim();
+                                const message = document.getElementById("message").value.trim();
+
+                                const mailtoLink = `mailto:ibrex29@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+                                    `Hello,\n\nMy name is ${name} (${email}).\n\n${message}\n\nBest regards,\n${name}`
+                                )}`;
+
+                                window.location.href = mailtoLink;
+                            }
+                        </script>
+
+
+                        <!-- Footer Start -->
+                        <section class="wow fadeIn" data-wow-delay="0.1s">
+                            <footer class="bg-secondary text-light pt-5 pb-3">
+                                <div class="container text-center">
+                                    <!-- Social Icons -->
+                                    <div class="d-flex justify-content-center mb-4">
+                                        <a class="btn btn-dark btn-square mx-1" href="https://twitter.com/ibrex29"
+                                            aria-label="Twitter">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                        <a class="btn btn-dark btn-square mx-1" href="https://facebook.com/ibrex29"
+                                            aria-label="Facebook">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                        <a class="btn btn-dark btn-square mx-1"
+                                            href="https://www.linkedin.com/in/ibrex/" aria-label="LinkedIn">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </a>
+                                        <a class="btn btn-dark btn-square mx-1" href="https://github.com/ibrex29"
+                                            aria-label="GitHub">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                    </div>
+
+                                    <!-- Optional Contact Info -->
+                                    <div class="mb-3">
+                                        <p class="mb-1"><i class="fas fa-envelope me-2"></i><a
+                                                href="mailto:ibrex29@gmail.com" class="text-info">ibrex29@gmail.com</a>
+                                        </p>
+                                        <p class="mb-0"><i class="fas fa-map-marker-alt me-2"></i>Kano, Nigeria</p>
+                                    </div>
+
+                                    <!-- Copyright -->
+                                    <p class="m-0 small">&copy; <span id="currentYear"></span> All Rights Reserved.
+                                        Designed by
+                                        <a href="https://www.linkedin.com/in/ibrex29/" class="text-info">Ibrahim
+                                            Muhammad</a>
+                                    </p>
+                                </div>
+                            </footer>
+                        </section>
+                        <!-- Footer End -->
+
+                        <!-- Optional: Auto Update Year -->
+                        <script>
+                            document.getElementById("currentYear").textContent = new Date().getFullYear();
+                        </script>
+
                     </div>
-                </section>
-                <!-- Footer End -->
             </div>
         </div>
-    </div>
 
 
-    <!-- Back to Top -->
-    <a href="#" class="back-to-top"><i class="fa fa-angle-double-up"></i></a>
+        <!-- Back to Top -->
+        <a href="#" class="back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/typed/typed.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/typed/typed.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
 
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
+        <!-- Contact Javascript File -->
+        <script src="mail/jqBootstrapValidation.min.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
 </body>
 
 </html>
