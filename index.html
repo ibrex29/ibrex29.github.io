@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="utf-8">
-    <title>Ibrex</title>
+    <title>Ibrahim Muhammad | Backend Software Engineer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Ibrahim Muhammad | Data Scientist, ML Engineer, and Backend Developer">
-    <meta name="keywords" content="Ibrahim Muhammad, Data Scientist, Machine Learning, Backend Developer, NestJS, PostgreSQL, Socket.IO, Ibrex">
+    <meta name="description" content="Ibrahim Muhammad | Backend Software Engineer specialising in Node.js, NestJS, Python, PostgreSQL, and DevOps. Based in Edinburgh, UK.">
+    <meta name="keywords" content="Ibrahim Muhammad, Backend Software Engineer, NestJS, Node.js, Python, PostgreSQL, DevOps, Edinburgh, Ibrex">
     <meta name="author" content="Ibrahim Muhammad">
 
     <!-- Favicon -->
@@ -17,7 +17,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -34,130 +34,197 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("theme");
+          var prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+          var theme = saved || (prefersLight ? "light" : "dark");
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      })();
+    </script>
+
     <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Ibrahim Muhammad | Ibrex Portfolio">
-    <meta property="og:description" content="Explore the portfolio of Ibrahim Muhammad - Data Scientist, ML Engineer, and Backend Developer.">
+    <meta property="og:title" content="Ibrahim Muhammad | Backend Software Engineer">
+    <meta property="og:description" content="Backend engineer building production systems with Node.js, NestJS, Python, and PostgreSQL. MSc Data Science student at Heriot-Watt University, Edinburgh.">
     <meta property="og:image" content="img/m.jpg">
     <meta property="og:url" content="https://ibrex29.github.io/"> <!-- replace with your site -->
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Ibrahim Muhammad | Ibrex Portfolio">
-    <meta name="twitter:description" content="Explore the portfolio of Ibrahim Muhammad - Data Scientist, ML Engineer, and Backend Developer.">
+    <meta name="twitter:title" content="Ibrahim Muhammad | Backend Software Engineer">
+    <meta name="twitter:description" content="Backend engineer building production systems with Node.js, NestJS, Python, and PostgreSQL. Based in Edinburgh, UK.">
     <meta name="twitter:image" content="img/m.jpg">
 </head>
 
 
 <body id="body">
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="floating-orb orb-1" aria-hidden="true"></div>
+    <div class="floating-orb orb-2" aria-hidden="true"></div>
+
     <!-- Spinner Start -->
     <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+        class="show position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
         aria-live="polite" aria-busy="true">
-        <div class="spinner-border text-info" style="width: 3rem; height: 3rem;" role="status">
-            <span class="visually-hidden">Loading...</span>
+        <div class="loader-terminal text-center">
+            <div id="loader-text">&gt; booting portfolio...</div>
+            <span class="cursor">_</span>
         </div>
     </div>
     <!-- Spinner End -->
 
 
-    <div class="container">
-        <div class="row g-5">
+    <div class="container py-lg-4">
+        <div class="row g-4 g-lg-5">
             <div class="col-lg-4 sticky-lg-top vh-100">
-                <div class="d-flex flex-column h-100 text-center overflow-auto shadow">
-                    <img class="w-100 img-fluid mb-4" src="img/profilepic.jpeg" alt="Image">
-                    <h1 class="text-info mt-2">Ibrahim Muhammad</h1>
-                    <div class="mb-4" style="height: 22px;">
-                        <h4 class="typed-text-output d-inline-block text-light"></h4>
-                        <div class="typed-text d-none">Data Scientist | Backend Developer</div>
-                    </div>
-                    <div class="d-flex justify-content-center mt-auto mb-3">
-                        <a class="btn btn-secondary btn-square mx-1" href="https://twitter.com/ibrex29"><i
-                                class="fab fa-twitter"></i></a>
-                        <a class="btn btn-secondary btn-square mx-1" href="https://facebook.com/ibrex29"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-secondary btn-square mx-1" href="https://www.linkedin.com/in/ibrex"><i
-                                class="fab fa-linkedin-in"></i></a>
-                        <a class="btn btn-secondary btn-square mx-1" href="https://github.com/ibrex29"><i
-                                class="fab fa-github"></i></a>
-                    </div>
-                    <div class="d-flex align-items-end justify-content-between border-top">
-                        <a href="assets/dowload/IBRAHIM MUHAMMAD BACKEND DEVELOPER.pdf"
-                            class="btn w-50 border-end">Download CV</a>
-                        <a href="#contact" class="btn w-50 btn-scroll">Contact Me</a>
+                <div class="sidebar-panel d-flex flex-column h-100 text-center">
+                    <div class="profile-wrap">
+                        <div class="dev-badge"><span class="pulse-dot"></span> Software Developer</div>
+                        <div class="profile-ring">
+                            <img src="img/profile-pic.jpeg" alt="Ibrahim Muhammad">
+                        </div>
+                        <h1>Ibrahim Muhammad</h1>
+                        <div class="mb-3" style="min-height: 28px;">
+                            <span class="typed-text-output d-inline-block"></span>
+                            <div class="typed-text d-none">Backend Engineer, NestJS &amp; Node.js, Python &amp; PostgreSQL, DevOps &amp; CI/CD</div>
+                        </div>
                     </div>
 
+                    <div class="mini-terminal">
+                        <div class="terminal-bar">
+                            <span></span><span></span><span></span>
+                            <small class="ms-2 text-muted">ibrex@dev ~</small>
+                        </div>
+                        <div class="terminal-body">
+                            <div><span class="kw">const</span> dev = {</div>
+                            <div>&nbsp;&nbsp;role: <span class="str">"Backend Engineer"</span>,</div>
+                            <div>&nbsp;&nbsp;stack: [<span class="str">"NestJS"</span>, <span class="str">"Python"</span>],</div>
+                            <div>&nbsp;&nbsp;location: <span class="str">"Edinburgh, UK"</span>,</div>
+                            <div>&nbsp;&nbsp;build: <span class="fn">shipProduction</span>()</div>
+                            <div>};</div>
+                        </div>
+                    </div>
 
+                    <nav class="sidebar-nav" aria-label="Section navigation">
+                        <a href="#about">about</a>
+                        <a href="#skills">skills</a>
+                        <a href="#experience">work</a>
+                        <a href="#projects">projects</a>
+                        <a href="#contact">contact</a>
+                    </nav>
 
+                    <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle light and dark mode">
+                        <i class="fas fa-sun theme-icon-light" aria-hidden="true"></i>
+                        <i class="fas fa-moon theme-icon-dark" aria-hidden="true"></i>
+                        <span class="theme-label">Light mode</span>
+                    </button>
+
+                    <div class="d-flex justify-content-center mb-3 px-3">
+                        <a class="btn social-btn btn-square mx-1" href="https://twitter.com/ibrex29" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a class="btn social-btn btn-square mx-1" href="https://www.linkedin.com/in/ibrex" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn social-btn btn-square mx-1" href="https://github.com/ibrex29" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+
+                    <div class="d-flex sidebar-actions mt-auto border-top">
+                        <a href="assets/dowload/ibrahim-muhammad-cv.pdf" class="btn btn-download w-50 border-end" download>Download CV</a>
+                        <a href="#contact" class="btn w-50 btn-scroll">Contact</a>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-8">
-                <!-- About Start -->
-                <section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
-                    <h1 class="title pb-3 mb-5 text-info">About Me</h1>
+            <div class="col-lg-8 content-panel">
+                <section class="py-5 wow fadeInUp" data-wow-delay="0.1s" id="about">
+                    <h2 class="title pb-3 mb-4">About <span class="title-accent">Me</span><span class="title-line"></span></h2>
 
-                    <p>
-                        I'm <strong>Ibrahim</strong>, nicknamed <strong>'Ibrex'</strong>, a passionate <strong>Data
-                            Scientist</strong> and <strong>Backend Developer</strong> driven by a deep love for
-                        technology and problem-solving. My journey in software development began in high school, where I
-                        discovered a talent for crafting innovative solutions to real-world challenges.
-                    </p>
-
-                    <p>
-                        In my role as a Data Scientist, I specialize in harnessing the power of <strong>Python</strong>
-                        for data analysis and machine learning. I take a meticulous approach to extracting actionable
-                        insights from complex datasets, enabling businesses to make informed decisions. My work includes
-                        optimizing algorithms and ensuring predictive models deliver accurate, meaningful results.
-                    </p>
-
-                    <p>
-                        In parallel, I excel in backend development using <strong>NestJS</strong>, with a focus on
-                        building scalable, reliable server architectures. From designing <strong>RESTful APIs</strong>
-                        to implementing <strong>authentication mechanisms</strong>, I prioritize robustness, efficiency,
-                        and seamless integration with frontend systems.
-                    </p>
-
-                    <p>
-                        I'm experienced in tools like <strong>PostgreSQL</strong>, <strong>MongoDB</strong>,
-                        <strong>Redis</strong>, <strong>Prisma ORM</strong>, and <strong>RabbitMQ</strong>, and skilled
-                        in building <strong>microservices</strong> and <strong>multi-tenant systems</strong>. My goal is
-                        always to enable optimal application performance and business value.
-                    </p>
-
-                    <p>
-                        Looking ahead, I'm excited about expanding my skill set and exploring emerging technologies like
-                        <strong>AI agents</strong>, <strong>blockchain</strong>, and advanced <strong>cloud-native
-                            systems</strong>. I’m committed to continuous learning, innovation, and making a meaningful
-                        impact through technology.
-                    </p>
-
-                    <div class="row mb-4">
-                        <div class="col-sm-6 py-1">
-                            <span class="fw-medium text-info">Name:</span> Ibrahim Muhammad
-                        </div>
-                        <div class="col-sm-6 py-1">
-                            <span class="fw-medium text-info">Degree:</span> BSc Computer Science
-                        </div>
-                        <div class="col-sm-6 py-1">
-                            <span class="fw-medium text-info">Experience:</span> 4+ Years
-                        </div>
-                        <div class="col-sm-6 py-1">
-                            <span class="fw-medium text-info">Phone:</span> +234 703 951 0826
-                        </div>
-                        <div class="col-sm-6 py-1">
-                            <span class="fw-medium text-info">Email:</span> Ibrex29@gmail.com
-                        </div>
-                        <div class="col-sm-6 py-1">
-                            <span class="fw-medium text-info">Location:</span> Kaduna, Nigeria
-                        </div>
-                        <div class="col-sm-6 py-1">
-                            <span class="fw-medium text-info">Freelance:</span> Available
+                    <div class="tech-marquee-wrap mb-4">
+                        <div class="tech-marquee">
+                            <span class="tech-pill">Node.js</span>
+                            <span class="tech-pill">NestJS</span>
+                            <span class="tech-pill">TypeScript</span>
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">PostgreSQL</span>
+                            <span class="tech-pill">Redis</span>
+                            <span class="tech-pill">RabbitMQ</span>
+                            <span class="tech-pill">Docker</span>
+                            <span class="tech-pill">GitHub Actions</span>
+                            <span class="tech-pill">Prisma</span>
+                            <span class="tech-pill">Next.js</span>
+                            <span class="tech-pill">Laravel</span>
                         </div>
                     </div>
 
-                    <div class="row g-4">
-                        <div class="col-md-4 col-lg-6 col-xl-4">
-                            <div class="d-flex bg-secondary p-4">
+                    <p>
+                        I'm <strong>Ibrahim</strong> (Ibrex), a <strong>Backend Software Engineer</strong> with 4+ years'
+                        experience designing, building, and deploying production systems using <strong>Node.js</strong>,
+                        <strong>NestJS</strong>, <strong>TypeScript</strong>, and <strong>Python</strong>.
+                    </p>
+
+                    <p>
+                        I'm currently part of an early-stage <strong>UK travel-tech startup</strong> in Edinburgh, in ideation
+                        on ancillary services that help passengers stay seated with family on flights. I'm also an
+                        <strong>MSc Data Science</strong> student at <strong>Heriot-Watt University</strong>.
+                    </p>
+
+                    <p>
+                        I've shipped 9+ production applications across education, HR, and public-sector platforms. My work
+                        includes multi-tenant SaaS architecture, <strong>RabbitMQ</strong> queue systems,
+                        <strong>PostgreSQL</strong> optimisation, analytics modules, and <strong>CI/CD</strong> automation
+                        with GitHub Actions and Docker.
+                    </p>
+
+                    <p>
+                        I've led small engineering teams, mentored 8+ junior developers and interns, and contributed to
+                        platforms serving 2,000+ applications and 1,200+ end users. I hold a First Class Honours
+                        equivalent BSc in Computer Science and I'm on track for Distinction in my MSc.
+                    </p>
+
+                    <div class="row g-3 mb-4">
+                        <div class="col-sm-6">
+                            <div class="info-chip">
+                                <span class="label">Name</span>
+                                <span class="value">Ibrahim Muhammad</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="info-chip">
+                                <span class="label">Degree</span>
+                                <span class="value">MSc Data Science (in progress)</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="info-chip">
+                                <span class="label">Experience</span>
+                                <span class="value">4+ Years</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="info-chip">
+                                <span class="label">Phone</span>
+                                <span class="value">+44 7867 058215</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="info-chip">
+                                <span class="label">Email</span>
+                                <span class="value">ibrex29@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="info-chip">
+                                <span class="label">Location</span>
+                                <span class="value">Edinburgh, Scotland, UK</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <div class="d-flex stat-card p-4">
                                 <h1 class="flex-shrink-0 display-5 text-info mb-0" data-toggle="counter-up">4</h1>
+                                <h1 class="flex-shrink-0 display-6 text-info mb-0">+</h1>
                                 <div class="ps-3">
                                     <p class="mb-0">Years of</p>
                                     <h5 class="mb-0">Experience</h5>
@@ -165,24 +232,24 @@
                             </div>
                         </div>
 
-                        <div class="col-md-4 col-lg-6 col-xl-4">
-                            <div class="d-flex bg-secondary p-4">
-                                <h1 class="flex-shrink-0 display-5 text-info mb-0" data-toggle="counter-up">14</h1>
+                        <div class="col-md-4">
+                            <div class="d-flex stat-card p-4">
+                                <h1 class="flex-shrink-0 display-5 text-info mb-0" data-toggle="counter-up">9</h1>
                                 <h1 class="flex-shrink-0 display-6 text-info mb-0">+</h1>
                                 <div class="ps-3">
-                                    <p class="mb-0">Happy</p>
-                                    <h5 class="mb-0">Clients</h5>
+                                    <p class="mb-0">Production</p>
+                                    <h5 class="mb-0">Applications</h5>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-md-4 col-lg-6 col-xl-4">
-                            <div class="d-flex bg-secondary p-4">
-                                <h1 class="flex-shrink-0 display-5 text-info mb-0" data-toggle="counter-up">20+</h1>
-                                <h1 class="flex-shrink-0 display-6 text-info mb-0">20+</h1>
+                        <div class="col-md-4">
+                            <div class="d-flex stat-card p-4">
+                                <h1 class="flex-shrink-0 display-5 text-info mb-0" data-toggle="counter-up">8</h1>
+                                <h1 class="flex-shrink-0 display-6 text-info mb-0">+</h1>
                                 <div class="ps-3">
-                                    <p class="mb-0">Completed</p>
-                                    <h5 class="mb-0">Projects</h5>
+                                    <p class="mb-0">Developers</p>
+                                    <h5 class="mb-0">Mentored</h5>
                                 </div>
                             </div>
                         </div>
@@ -192,281 +259,172 @@
 
                 <!-- About End -->
 
-                <!-- Skills Start -->
-                <section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
-                    <h1 class="title pb-3 mb-5 text-info">Skills</h1>
+                <section class="py-5 wow fadeInUp" data-wow-delay="0.1s" id="skills">
+                    <h2 class="title pb-3 mb-4"><span class="title-accent">Tech</span> Stack<span class="title-line"></span></h2>
                     <div class="row">
                         <div class="col-md-6">
-                            <h5 class="text-primary">Backend Development</h5>
-                            <ul class="mb-4">
-                                <li>Node.js, TypeScript, NestJS, Express, Flask </li>
-                                <li>RESTful API Development, Microservices Architecture</li>
-                                <li>Swagger API Documentation</li>
-                            </ul>
-
-                            <h5 class="text-primary">Database Technologies</h5>
-                            <ul class="mb-4">
-                                <li>PostgreSQL, MongoDB, Redis</li>
-                                <li>Prisma ORM, Mongoose ORM</li>
-                                <li>SQL & NoSQL, Database Optimization</li>
-                            </ul>
-
-                            <h5 class="text-primary">Authentication & Security</h5>
-                            <ul class="mb-4">
-                                <li>JWT, OAuth 2.0, Passport.js</li>
-                                <li>Role-Based Access Control (RBAC), API Guards</li>
-                                <li>Security Best Practices, Data Encryption</li>
-                            </ul>
-                        </div>
-
-                        <div class="col-md-6">
-                            <h5 class="text-primary">DevOps & Performance</h5>
-                            <ul class="mb-4">
-                                <li>Docker, CI/CD Pipelines, Git</li>
-                                <li>Caching Strategies</li>
-                                <li>System Monitoring & Optimization</li>
-                                <li>Scalability & Performance Optimization</li>
-                            </ul>
-
-                            <h5 class="text-primary">AI & Data Engineering</h5>
-                            <ul>
-                                <li>AI Agents, Predictive Modeling</li>
-                                <li>Data Cleaning & Engineering</li>
-                                <li>Real-time Data Processing</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Skills End -->
-                <!-- Experience Start -->
-                <section class="py-5 wow fadeInUp" data-wow-delay="0.1s">
-                    <h1 class="title pb-3 mb-5 text-info">Experience</h1>
-                    <div class="border-start border-2 border-light pt-2 ps-5">
-
-                        <div class="position-relative mb-4">
-                            <span class="bi bi-arrow-right fs-4 text-light position-absolute"
-                                style="top: -5px; left: -50px;"></span>
-                            <h5 class="mb-1">Backend Developer</h5>
-                            <p class="mb-2">Nigerian Startup Portal (NSP) | <small>April 2024 – Present</small></p>
-                            <p>
-                                Engineered scalable backend systems using NestJS, PostgreSQL, and Prisma ORM.
-                                Implemented microservices with RabbitMQ, Redis caching, and role-based access control
-                                (RBAC).
-                                Led key modules including user registration, ticketing, and labelling features, while
-                                managing CI/CD and Docker-based deployments.
-                            </p>
-                        </div>
-
-                        <div class="position-relative mb-4">
-                            <span class="bi bi-arrow-right fs-4 text-light position-absolute"
-                                style="top: -5px; left: -50px;"></span>
-                            <h5 class="mb-1">Backend Developer</h5>
-                            <p class="mb-2">CYNEGIEhr Solution | <small>Nov 2023 – Mar 2024</small></p>
-                            <p>
-                                Developed a multi-tenant HR platform backend with NestJS, MongoDB (Mongoose & TypeORM).
-                                Delivered core HR modules (Employee, Attendance, Leave) with JWT/OAuth2 authentication,
-                                tenant-based data segregation, real-time notifications, and Dockerized CI/CD pipelines.
-                            </p>
-                        </div>
-
-                        <div class="position-relative mb-4">
-                            <span class="bi bi-arrow-right fs-4 text-light position-absolute"
-                                style="top: -5px; left: -50px;"></span>
-                            <h5 class="mb-1">Backend Developer</h5>
-                            <p class="mb-2">Tech Atlas | <small>April 2024 – Jan 2025</small></p>
-                            <p>
-                                Led backend development using NestJS and PostgreSQL with Prisma ORM.
-                                Built secure APIs, implemented Passport.js with OAuth2 and JWT, enforced RBAC, and
-                                documented APIs using Swagger.
-                                Optimized performance with caching, indexing, and query refinement.
-                            </p>
-                        </div>
-
-                        <div class="position-relative mb-4">
-                            <span class="bi bi-arrow-right fs-4 text-light position-absolute"
-                                style="top: -5px; left: -50px;"></span>
-                            <h5 class="mb-1">Backend Developer</h5>
-                            <p class="mb-2">Bolle Insurance | <small>April 2024 – Jan 2025</small></p>
-                            <p>
-                                Built a multi-provider insurance API with NestJS, integrating Leadway and Allianz.
-                                Implemented dynamic package handling, DTO validation, OAuth2 authentication, and robust
-                                error handling.
-                                Standardized external API responses and ensured secure policy issuance workflows.
-                            </p>
-                        </div>
-
-                        <div class="position-relative mb-4">
-                            <span class="bi bi-arrow-right fs-4 text-light position-absolute"
-                                style="top: -5px; left: -50px;"></span>
-                            <h5 class="mb-1">Full-Stack Developer</h5>
-                            <p class="mb-2">Jigawa Journal of Social and Management Science | <small>2022 –
-                                    Present</small></p>
-                            <p>
-                                Developed and managed a journal system using WordPress, overseeing digital initiatives
-                                as Web Manager.
-                            </p>
-                        </div>
-
-                        <div class="position-relative mb-4">
-                            <span class="bi bi-arrow-right fs-4 text-light position-absolute"
-                                style="top: -5px; left: -50px;"></span>
-                            <h5 class="mb-1">Web Developer</h5>
-                            <p class="mb-2">SLU Journal Management System | <small>2022 – Present</small></p>
-                            <p>
-                                Led website development and maintenance, ensured content relevancy, and collaborated
-                                with cross-functional teams for digital strategies.
-                            </p>
-                        </div>
-
-                        <div class="position-relative mb-4">
-                            <span class="bi bi-arrow-right fs-4 text-light position-absolute"
-                                style="top: -5px; left: -50px;"></span>
-                            <h5 class="mb-1">Developer (IoT Integration)</h5>
-                            <p class="mb-2">Fish Pond Monitoring System | <small>Mar 2022 – Dec 2022</small></p>
-                            <p>
-                                Integrated IoT devices for real-time pond monitoring, used Firebase for data sync, and
-                                developed predictive models and alert systems.
-                            </p>
-                        </div>
-
-                        <div class="position-relative mb-4">
-                            <span class="bi bi-arrow-right fs-4 text-light position-absolute"
-                                style="top: -5px; left: -50px;"></span>
-                            <h5 class="mb-1">Developer</h5>
-                            <p class="mb-2">Project SEED (Orphan Management System) | <small>Dec 2022 – Feb 2023</small>
-                            </p>
-                            <p>
-                                Built backend system with NestJS and PostgreSQL for orphan registration, sponsorship,
-                                and real-time notifications.
-                                Ensured security through RBAC and session management.
-                            </p>
-                        </div>
-
-                        <div class="position-relative mb-4">
-                            <span class="bi bi-arrow-right fs-4 text-light position-absolute"
-                                style="top: -5px; left: -50px;"></span>
-                            <h5 class="mb-1">Data Scientist</h5>
-                            <p class="mb-2">Jigawa Data Science Nig. | <small>2021 – 2022</small></p>
-                            <p>
-                                Developed a chronic kidney disease prediction model, handled data analysis, model
-                                training, and deployment on a web server.
-                            </p>
-                        </div>
-
-                    </div>
-                </section>
-                <!-- Experience End -->
-
-
-
-                <!-- Services Start -->
-                <section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
-                    <h1 class="title pb-3 mb-5">Services</h1>
-                    <div class="row g-4">
-                        <!-- Web Development -->
-                        <div class="col-md-6">
-                            <div class="service-item">
-                                <i class="fa fa-2x fa-code mx-auto mb-4"></i>
-                                <h5 class="mb-2">Web Development</h5>
-                                <p class="mb-0">
-                                    I specialize in building robust and scalable web applications with a focus on
-                                    performance and user experience.<br>
-                                    From responsive landing pages to complex platforms, I deliver seamless and
-                                    professional web solutions.
-                                </p>
+                            <div class="skill-category">
+                                <h5>// Languages &amp; Frameworks</h5>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Node.js</span>
+                                    <span class="skill-tag">NestJS</span>
+                                    <span class="skill-tag">TypeScript</span>
+                                    <span class="skill-tag">Python 3</span>
+                                    <span class="skill-tag">Next.js</span>
+                                    <span class="skill-tag">REST APIs</span>
+                                    <span class="skill-tag">WordPress</span>
+                                    <span class="skill-tag">Laravel</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h5>// Databases &amp; Caching</h5>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">PostgreSQL</span>
+                                    <span class="skill-tag">Redis</span>
+                                    <span class="skill-tag">Prisma ORM</span>
+                                    <span class="skill-tag">Multi-tenant design</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h5>// Messaging</h5>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">RabbitMQ</span>
+                                    <span class="skill-tag">Redis Pub/Sub</span>
+                                    <span class="skill-tag">Async queues</span>
+                                </div>
                             </div>
                         </div>
+                        <div class="col-md-6">
+                            <div class="skill-category">
+                                <h5>// DevOps &amp; Infra</h5>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Docker</span>
+                                    <span class="skill-tag">GitHub Actions</span>
+                                    <span class="skill-tag">DigitalOcean</span>
+                                    <span class="skill-tag">CI/CD</span>
+                                    <span class="skill-tag">GitOps</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h5>// Practices</h5>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Microservices</span>
+                                    <span class="skill-tag">Code review</span>
+                                    <span class="skill-tag">Agile</span>
+                                    <span class="skill-tag">Testing</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h5>// AI &amp; Data</h5>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">OpenAI API</span>
+                                    <span class="skill-tag">LLM integration</span>
+                                    <span class="skill-tag">Data pipelines</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-                        <!-- Backend Development -->
+                <section class="py-5 wow fadeInUp" data-wow-delay="0.1s" id="experience">
+                    <h2 class="title pb-3 mb-4">Work <span class="title-accent">Experience</span><span class="title-line"></span></h2>
+                    <div class="timeline pt-2 ps-4">
+
+                        <div class="timeline-item">
+                            <h5 class="mb-1">Backend Engineer (Part-time)</h5>
+                            <p class="meta">UK travel-tech startup, Edinburgh | 2026 – Present</p>
+                            <p>
+                                Part of a 4-person founding team developing an ancillary platform for airline seat
+                                negotiation. In ideation stage: defining user journeys, technical approach, and early
+                                API and PostgreSQL architecture for seat preference workflows.
+                            </p>
+                        </div>
+
+                        <div class="timeline-item">
+                            <h5 class="mb-1">Backend Engineer &amp; DevOps Engineer</h5>
+                            <p class="meta">Thermolinks Concept Ltd, Abuja (Remote) | 2023 – 2026</p>
+                            <p>
+                                Promoted from NYSC intern to full-time within 12 months. Built NestJS microservices for
+                                the Nigeria Startup Portal and Project Noor. Delivered labelling and ticketing for 2,000+
+                                startup applications. Moved email delivery to RabbitMQ (500+ daily notifications),
+                                paginated 25+ endpoints with 60% faster list APIs, built analytics module, and automated
+                                CI/CD with GitHub Actions and Docker.
+                            </p>
+                        </div>
+
+                        <div class="timeline-item">
+                            <h5 class="mb-1">Backend Engineer (Contract)</h5>
+                            <p class="meta">Cynergy HR Solutions, Lagos (Remote) | 2024 – 2025</p>
+                            <p>
+                                Built multi-tenant HR modules with Python and NestJS for 4 client organisations.
+                                Led leave management for 1,200+ employees and cut new client setup from 2 weeks to 2 days
+                                via reusable tenant templates.
+                            </p>
+                        </div>
+
+                        <div class="timeline-item">
+                            <h5 class="mb-1">Web Manager (Voluntary, Part-time)</h5>
+                            <p class="meta">Sule Lamido University, Kafin Hausa (Remote) | 2022 – Present</p>
+                            <p>
+                                Lead 5 developers across TypeScript, Next.js, NestJS, WordPress, and Laravel. Delivered
+                                HR system with 800+ staff records and a multi-tenant journal platform used university-wide.
+                                Contributing to a 5-year university digital framework. Mentored 4 interns and improved PR
+                                turnaround from 5 days to 2 days.
+                            </p>
+                        </div>
+
+                    </div>
+                </section>
+                <section class="py-5 wow fadeInUp" data-wow-delay="0.1s" id="education">
+                    <h2 class="title pb-3 mb-4"><span class="title-accent">Education</span><span class="title-line"></span></h2>
+                    <div class="timeline pt-2 ps-4">
+                        <div class="timeline-item">
+                            <h5 class="mb-1">MSc Data Science</h5>
+                            <p class="meta">Heriot-Watt University, Edinburgh, UK | Jan 2026 – Present</p>
+                            <p>On track for Distinction.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5 class="mb-1">BSc Computer Science</h5>
+                            <p class="meta">Sule Lamido University, Kafin Hausa, Nigeria | 2018 – 2023</p>
+                            <p>First Class Honours equivalent (GPA 4.92/5.00). Best Graduating Student.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="py-5 wow fadeInUp" data-wow-delay="0.1s" id="services">
+                    <h2 class="title pb-3 mb-4">What I <span class="title-accent">Build</span><span class="title-line"></span></h2>
+                    <div class="row g-4">
                         <div class="col-md-6">
                             <div class="service-item">
                                 <i class="fa fa-2x fa-server mx-auto mb-4"></i>
-                                <h5 class="mb-2">Backend Development & API Integration</h5>
-                                <p class="mb-0">
-                                    Proficient in developing high-performance, secure, and scalable backend systems
-                                    using Node.js, NestJS, and Express.js.<br>
-                                    I design clean APIs, handle real-time data, and ensure modular, maintainable
-                                    codebases.
-                                </p>
+                                <h5 class="mb-2">Backend APIs &amp; Microservices</h5>
+                                <p class="mb-0">Scalable NestJS and Python services with REST APIs, multi-tenant architecture, RabbitMQ queues, and PostgreSQL.</p>
                             </div>
                         </div>
-
-                        <!-- Server & Database Development -->
                         <div class="col-md-6">
                             <div class="service-item">
                                 <i class="fa fa-2x fa-database mx-auto mb-4"></i>
-                                <h5 class="mb-2">Server & Database Development</h5>
-                                <p class="mb-0">
-                                    Experienced in PostgreSQL, Prisma ORM, SQL, and MongoDB to build efficient and
-                                    scalable data solutions.<br>
-                                    Skilled in database optimization, migration, and secure server deployments using
-                                    Docker and CI/CD pipelines.
-                                </p>
+                                <h5 class="mb-2">Data Systems &amp; Analytics</h5>
+                                <p class="mb-0">Database design, query optimisation, pagination, analytics modules, and reporting pipelines for operational teams.</p>
                             </div>
                         </div>
-
-                        <!-- AI Automations -->
-                        <div class="col-md-6">
-                            <div class="service-item">
-                                <i class="fa fa-2x fa-robot mx-auto mb-4"></i>
-                                <h5 class="mb-2">AI Automations & Intelligent Systems</h5>
-                                <p class="mb-0">
-                                    I design AI-powered automation tools to enhance efficiency and drive innovation.<br>
-                                    Experience includes NLP, predictive analytics, chatbots, and workflow automation
-                                    using Python, OpenAI API, and machine learning frameworks.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Data Science & Machine Learning -->
-                        <div class="col-md-6">
-                            <div class="service-item">
-                                <i class="fab fa-2x fa-python mx-auto mb-4"></i>
-                                <h5 class="mb-2">Data Science & Machine Learning</h5>
-                                <p class="mb-0">
-                                    I analyze data to extract insights and build predictive models for informed
-                                    decision-making.<br>
-                                    Tools include Python, Pandas, scikit-learn, and TensorFlow, applied to forecasting,
-                                    clustering, and classification tasks.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- DevOps & Cloud Deployment -->
                         <div class="col-md-6">
                             <div class="service-item">
                                 <i class="fa fa-2x fa-cloud-upload-alt mx-auto mb-4"></i>
-                                <h5 class="mb-2">DevOps & Cloud Deployment</h5>
-                                <p class="mb-0">
-                                    Deploying scalable applications on AWS, DigitalOcean, and Heroku with automation
-                                    tools like Docker and GitHub Actions.<br>
-                                    Focused on uptime, scalability, and security in cloud infrastructure.
-                                </p>
+                                <h5 class="mb-2">DevOps &amp; CI/CD</h5>
+                                <p class="mb-0">Docker containerisation, GitHub Actions pipelines, and automated deployments on DigitalOcean and cloud infra.</p>
                             </div>
                         </div>
-
-                        <!-- Technical Consulting -->
                         <div class="col-md-6">
                             <div class="service-item">
-                                <i class="fa fa-2x fa-lightbulb mx-auto mb-4"></i>
-                                <h5 class="mb-2">Technical Consulting & Strategy</h5>
-                                <p class="mb-0">
-                                    Offering strategic advice on project planning, architecture, and tech stack
-                                    selection.<br>
-                                    Helping startups and businesses align technology with goals through efficient and
-                                    cost-effective solutions.
-                                </p>
+                                <i class="fa fa-2x fa-code mx-auto mb-4"></i>
+                                <h5 class="mb-2">Full-Stack Platforms</h5>
+                                <p class="mb-0">End-to-end web platforms with Next.js, TypeScript, WordPress, and Laravel for education, HR, and public-sector clients.</p>
                             </div>
                         </div>
                     </div>
                 </section>
-                <!-- Services End -->
-
-
-                <!-- Portfolio Start -->
-                <section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
-                    <h1 class="title pb-3 mb-5">Portfolio</h1>
+                <section class="py-5 wow fadeInUp" data-wow-delay="0.1s" id="projects">
+                    <h2 class="title pb-3 mb-4">Highlighted <span class="title-accent">Projects</span><span class="title-line"></span></h2>
                     <div class="row">
                         <div class="col-12">
                             <div class="row">
@@ -479,24 +437,17 @@
                             </div>
                             <div class="row portfolio-container">
 
-                                <!-- PastQ -->
+                                <!-- Cynergy HR -->
                                 <div class="col-md-6 mb-4 portfolio-item">
                                     <div class="position-relative overflow-hidden mb-2">
                                         <div class="portfolio-image-container">
-                                            <img class="img-fluid w-100" src="img/portfolio-1.png" alt="PastQ App">
-                                        </div>
-                                        <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                            <a href="https://play.google.com/store/apps/details?id=com.geeksaxis.pastQ"
-                                                target="_blank">
-                                                <i class="bi bi-link text-light"></i>
-                                            </a>
+                                            <img class="img-fluid w-100" src="img/portfolio-1.png" alt="Cynergy HR Leave Module">
                                         </div>
                                     </div>
-                                    <h4>PastQ</h4>
-                                    <p>A past examination question app helping students prepare efficiently.</p>
-                                    <div>
-                                        <img src="./img/flutter.png" width="30px" />
-                                        <img src="./img/firebase.png" width="30px" />
+                                    <h4>Cynergy HR: Leave Management</h4>
+                                    <p>End-to-end leave workflow for 1,200+ employees with multi-tenant support, approvals, and balance tracking.</p>
+                                    <div class="project-stack">
+                                        <span>NestJS</span><span>Python</span><span>PostgreSQL</span>
                                     </div>
                                 </div>
 
@@ -512,14 +463,10 @@
                                             </a>
                                         </div>
                                     </div>
-                                    <h4>NSP API</h4>
-                                    <p>Backend API for Nigeria Startup Portal, facilitating startup registration and
-                                        labeling.</p>
-                                    <div>
-                                        <img src="./img/NSP.jpeg" width="30px" />
-                                        <!-- <img src="./img/postgresql.png" width="30px" />
-                                        <img src="./img/docker.png" width="30px" /> -->
-                                        <img src="./img/ts.png" width="30px" />
+                                    <h4>Nigeria Startup Portal</h4>
+                                    <p>Public-sector onboarding portal processing 2,000+ startup applications with labelling, ticketing, and workflow tracking.</p>
+                                    <div class="project-stack">
+                                        <span>NestJS</span><span>TypeScript</span><span>RabbitMQ</span><span>Docker</span>
                                     </div>
                                 </div>
 
@@ -535,14 +482,10 @@
                                             </a>
                                         </div>
                                     </div>
-                                    <h4>SLUJST</h4>
-                                    <p>An academic journal management system for submissions, peer reviews, and
-                                        publication workflows.</p>
-                                    <div>
-                                        <!-- <img src="./img/nestjs.png" width="30px" />
-                                        <img src="./img/postgresql.png" width="30px" />
-                                        <img src="./img/socketio.png" width="30px" /> -->
-                                        <img src="./img/ts.png" width="30px" />
+                                    <h4>SLU Journal Management System</h4>
+                                    <p>Multi-tenant academic journal platform serving the entire university with isolated tenant data for publishing workflows.</p>
+                                    <div class="project-stack">
+                                        <span>Next.js</span><span>NestJS</span><span>PostgreSQL</span>
                                     </div>
                                 </div>
 
@@ -581,15 +524,10 @@
                         </div>
                     </div>
                 </section>
-                <!-- Portfolio End -->
-
-
-                <!-- Testimonial Start -->
-                <section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s" style="margin-top: 30px;">
-                    <h1 class="title pb-3 mb-5">Testimonial</h1>
+                <section class="py-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <h2 class="title pb-3 mb-4"><span class="title-accent">Testimonials</span><span class="title-line"></span></h2>
                     <div class="owl-carousel testimonial-carousel">
-                        <!-- Testimonial 1 -->
-                        <div class="text-left">
+                        <div class="testimonial-card text-left">
                             <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
                             <p class="fs-4 mb-4">
                                 The site developed for managing our journals has exceeded our expectations. Its
@@ -609,8 +547,7 @@
                             </div>
                         </div>
 
-                        <!-- Testimonial 2: DG NITDA -->
-                        <div class="text-left">
+                        <div class="testimonial-card text-left">
                             <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
                             <p class="fs-4 mb-4">
                                 The successful delivery of the NSP platform has significantly advanced our digital
@@ -633,13 +570,8 @@
                         <!-- You can add more testimonials here -->
                     </div>
                 </section>
-                <!-- Testimonial End -->
-
-
-                <!-- Contact Start -->
                 <section class="py-5 wow fadeInUp" data-wow-delay="0.1s" id="contact">
-                    <div class="container">
-                        <h1 class="title pb-3 mb-5 text-center">Contact Me</h1>
+                    <h2 class="title pb-3 mb-4 text-center">Get In <span class="title-accent">Touch</span><span class="title-line mx-auto"></span></h2>
                         <form id="contactForm" onsubmit="sendEmail(); return false;">
                             <div class="row g-3">
                                 <div class="col-md-6">
@@ -683,98 +615,36 @@
                                 const email = document.getElementById("email").value.trim();
                                 const subject = document.getElementById("subject").value.trim();
                                 const message = document.getElementById("message").value.trim();
-
                                 const mailtoLink = `mailto:ibrex29@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
                                     `Hello,\n\nMy name is ${name} (${email}).\n\n${message}\n\nBest regards,\n${name}`
                                 )}`;
-
-                                // Trigger mail client
                                 window.location.href = mailtoLink;
-
-                                // Show confirmation message
-                                const confirmation = document.getElementById("confirmation");
-                                confirmation.classList.remove("d-none");
-
-                                // Optional: Reset form fields
                                 document.getElementById("contactForm").reset();
-
-                                // Auto-hide confirmation after 5 seconds
-                                setTimeout(() => {
-                                    confirmation.classList.add("d-none");
-                                }, 5000);
                             }
                         </script>
 
-                        <!-- Contact End -->
-
-
-                        <script>
-                            function sendEmail() {
-                                const name = document.getElementById("name").value.trim();
-                                const email = document.getElementById("email").value.trim();
-                                const subject = document.getElementById("subject").value.trim();
-                                const message = document.getElementById("message").value.trim();
-
-                                const mailtoLink = `mailto:ibrex29@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-                                    `Hello,\n\nMy name is ${name} (${email}).\n\n${message}\n\nBest regards,\n${name}`
-                                )}`;
-
-                                window.location.href = mailtoLink;
-                            }
-                        </script>
-
-
-                        <!-- Footer Start -->
-                        <section class="wow fadeIn" data-wow-delay="0.1s">
-                            <footer class="bg-secondary text-light pt-5 pb-3">
-                                <div class="container text-center">
-                                    <!-- Social Icons -->
+                        <footer class="text-light pt-5 pb-3">
+                                <div class="text-center">
                                     <div class="d-flex justify-content-center mb-4">
-                                        <a class="btn btn-dark btn-square mx-1" href="https://twitter.com/ibrex29"
-                                            aria-label="Twitter">
-                                            <i class="fab fa-twitter"></i>
-                                        </a>
-                                        <a class="btn btn-dark btn-square mx-1" href="https://facebook.com/ibrex29"
-                                            aria-label="Facebook">
-                                            <i class="fab fa-facebook-f"></i>
-                                        </a>
-                                        <a class="btn btn-dark btn-square mx-1"
-                                            href="https://www.linkedin.com/in/ibrex/" aria-label="LinkedIn">
-                                            <i class="fab fa-linkedin-in"></i>
-                                        </a>
-                                        <a class="btn btn-dark btn-square mx-1" href="https://github.com/ibrex29"
-                                            aria-label="GitHub">
-                                            <i class="fab fa-github"></i>
-                                        </a>
+                                        <a class="btn social-btn btn-square mx-1" href="https://twitter.com/ibrex29" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                        <a class="btn social-btn btn-square mx-1" href="https://www.linkedin.com/in/ibrex/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                        <a class="btn social-btn btn-square mx-1" href="https://github.com/ibrex29" aria-label="GitHub"><i class="fab fa-github"></i></a>
                                     </div>
-
-                                    <!-- Optional Contact Info -->
                                     <div class="mb-3">
-                                        <p class="mb-1"><i class="fas fa-envelope me-2"></i><a
-                                                href="mailto:ibrex29@gmail.com" class="text-info">ibrex29@gmail.com</a>
-                                        </p>
-                                        <p class="mb-0"><i class="fas fa-map-marker-alt me-2"></i>Abuja, Nigeria</p>
+                                        <p class="mb-1"><i class="fas fa-envelope me-2"></i><a href="mailto:ibrex29@gmail.com" class="text-info">ibrex29@gmail.com</a></p>
+                                        <p class="mb-0"><i class="fas fa-map-marker-alt me-2"></i>Edinburgh, Scotland, UK</p>
                                     </div>
-
-                                    <!-- Copyright -->
-                                    <p class="m-0 small">&copy; <span id="currentYear"></span> All Rights Reserved.
-                                        Designed by
-                                        <a href="https://www.linkedin.com/in/ibrex29/" class="text-info">Ibrahim
-                                            Muhammad</a>
-                                    </p>
+                                    <p class="m-0 small">&copy; <span id="currentYear"></span> Ibrahim Muhammad. Built with code.</p>
                                 </div>
-                            </footer>
-                        </section>
-                        <!-- Footer End -->
+                        </footer>
 
-                        <!-- Optional: Auto Update Year -->
                         <script>
                             document.getElementById("currentYear").textContent = new Date().getFullYear();
                         </script>
-
-                    </div>
+                </section>
             </div>
         </div>
+    </div>
 
 
         <!-- Back to Top -->
@@ -797,6 +667,7 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+        <script src="js/animations.js"></script>
 </body>
 
 </html>
